@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--<title>Hotel Website</title>-->
+	<!--<link rel="stylesheet" type="text/css" href="css/style.css">-->
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<style>
+		{
+	margin: 0;
+	padding: 0;
+	font-family: Century Gothic;
+}
+
+
+#my
+{
+	background-size: cover;
+}
+
+.main
+{
+	max-width: 1850px;
+	margin: auto;
+}
+.title
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.title h1
+{
+	color: #fff;
+	font-size:100px;
+	font-family: Brush script MT;
+}
+.button
+{
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.btn
+{
+	border: 2px solid #fff;
+	padding: 10px 30px;
+    color:aliceblue;
+    text-decoration: none;
+}
+.btn:hover
+{
+	background-color: #fff;
+	color: #000;	
+}
+.navbar-deafult
+{
+	background-color: rgba(0,0,0,0.3);
+}
+#me{
+	height:fit-content
+	width: auto;
+}
+	</style>
+</head>
+<body>
+		
+
+	<header>
+		<div class="main">
+				<nav class="navbar navbar-expand-xl bg-dark navbar-dark fixed-top" style="padding:10px;">
+						<div class ="container-fluid">
+						  <div class="navbar-header">
+				<a class="navbar-brand" href="#"><img src="lo.png" width="80" height="35" ></a>          </div>
+						 <ul class="nav navbar-nav navbar-center">
+									<li class="active"><a class="nav link" href="home.html">Home</a></li>
+									<li><a class="nav link" href="about.html">About</a></li>
+									<li><a class="nav link" href="gallery.html">Gallery</a></li>
+									<li><a class="nav link" href="services.html">Services</a></li>
+									<li><a class="nav link" href="contact.html">Contact</a></li>
+				
+								  </ul>
+						  <ul class="nav navbar-nav navbar-right">
+								<div class="search-container">
+										<form action="/action_page.php">
+										  <input type="text" placeholder="Search.." name="search">
+										  <button type="submit"><i class="fa fa-search"></i>Search</button>
+										</form>
+									  </div>
+									</ul>
+						</div>
+					  </nav>
+		</div>
+		<script>
+				$("span.menu").click(function(){
+					$(" ul.navig").slideToggle("slow")
+				});
+			</script>
+		<div class="container-fluid">
+		<div id="my" class="carousel slide" data-ride="carousel" >
+		<ol class="carousel-indicators">
+		  <li data-target="#my" data-slide-to="0" class="active"></li>
+		  <li data-target="#my" data-slide-to="1"></li>
+		 
+		</ol>
+		<div class="carousel-inner">
+		  <div class="item active" id="me"><img src="b.jpg" />
+			  <div class="carousel-caption" style="background-color: #130f40;opacity: 0.5">
+				</div>
+				</div>
+				<div class="item" id="me"><img src="bc1.jpeg" />
+			  <div class="carousel-caption" style="background-color: #130f40;opacity: 0.5">
+				</div>
+				</div>
+				
+			</div>
+			</div>
+		</div>
+		<div class="title">
+			<h1>Welcome To Our Hotel!</h1>
+		</div>
+		<div class="button">
+			<a href="home.html" class="btn"><b>CLICK HERE TO EXPLORE</b></a>
+		</div>
+	</header>
+</body>
+<html>
