@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+          
+  
+<style>
+   body{
+    background-image: url("backdata1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 2400px;  
+  }
+#demo {
+  margin: auto;
+  width: 70%;
+  padding: 20px;
+}
+.wrapper {
+    text-align: center;
+    
+}
+
+.result1{
+  color:white;
+    text-align:center;
+    font-size: x-large;
+}
+
+</style>
+</head>
+<body>
+
+<div id="demo">
+<h1 style="color: crimson;text-align:center;"><b>LATEST MOVIES SHOWS AVAILABLE ON EARLY HOTEL BOOKING</b></h1>
+<div class="wrapper">
+<button type="button" class="btn btn-info" onclick="loadDoc()">TOP RATED MOVIES</button>
+<button type="button" class="btn btn-danger" onclick="loadDok()">POPULAR MOVIES</button>
+</div>
+</div>
+<div id="result" class ="result1"></div>
+
+<script>
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("result").innerHTML =
+      this.responseText;
+
+      var obj=JSON.parse(this.responseText);
+      console.log(obj);
+      var res=" ";
+      for (i=0;i<10;i++){
+      var res=res+"Movie Name : "+obj.results[i].original_title+'</br>'+'</br>';
+      var res=res+"Realese Date : "+obj.results[i].release_date+'</br>'+'</br>';
+      var res=res+"Overview : "+obj.results[i].overview+'</br>'+'</br>'+'</br>';
+    }
+      document.getElementById("result").innerHTML=res;
+    }
+  };
+  xhttp.open("GET", "https://api.themoviedb.org/3/movie/top_rated?api_key=a6b2854c4b4d35cc4f838fc5f516cebd&language=en-US&page=1", true);
+  xhttp.send();
+}
+
+function loadDok() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("result").innerHTML =
+      this.responseText;
+
+      var obj=JSON.parse(this.responseText);
+      console.log(obj);
+      var res=" ";
+      for (i=0;i<10;i++){
+      var res=res+"Movie Name : "+obj.results[i].original_title+'</br>'+'</br>';
+      var res=res+"Realese Date : "+obj.results[i].release_date+'</br>'+'</br>';
+      var res=res+"Overview : "+obj.results[i].overview+'</br>'+'</br>'+'</br>';
+    }
+      document.getElementById("result").innerHTML=res;
+    }
+  };
+  xhttp.open("GET", "https://api.themoviedb.org/3/movie/popular?api_key=a6b2854c4b4d35cc4f838fc5f516cebd&language=en-US&page=1", true);
+  xhttp.send();
+}
+</script>
+
+</body>
+</html>
+
+
+        
