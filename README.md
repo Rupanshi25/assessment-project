@@ -11,3 +11,6 @@ b)Top Rated Movies- https://api.themoviedb.org/3/movie/top_rated?api_key=a6b2854
 c)Popular Movies- https://api.themoviedb.org/3/movie/popular?api_key=a6b2854c4b4d35cc4f838fc5f516cebd&language=en-US&page=1
 d)Maps- https://maps.googleapis.com/maps/api/js?key=AIzaSyC2LiYIaaq7tkuV53zUWtNgD6zgFmEiWx4&callback=myMap
 
+
+    LIVE URL-- https://rupanshi25.github.io/assessment-project/
+
